@@ -1,1 +1,10 @@
 colorama
+python-nmap
+spiderfoot
+scikit-learn
+pandas
+numpy
+requests
+shodan
+whois
+dnsrecon
