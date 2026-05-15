@@ -28,21 +28,31 @@ python toolnet.py
 [+] Tool-Net ready for weird scanning...
 [IA] Modo: paranoico nivel 3
 
-🚀 Paso final: Instalar y ejecutar
-python3 -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python3 toolnet.py
+🛠️ Instalación completa (Ubuntu/Termux)
+# Instalar dependencias del sistema
+sudo apt update
+sudo apt install nmap whois python3-pip -y
 
-🎯 Para Termux (extra)
-pkg install python
-pip install colorama
+# En Termux
+pkg install nmap whois python
+
+# Crear entorno virtual
+python3 -m venv venv
+source venv/bin/activate
+
+# Instalar librerías Python
+pip install --upgrade pip
+pip install python-nmap colorama scikit-learn pandas numpy requests shodan whois
+
+# SpiderFoot tiene dependencias extras
+pip install spiderfoot
+
+# Ejecutar
 python toolnet.py
 
-🪟 Para Windows
+⚠️ Para Windows
+# Instalar Nmap desde https://nmap.org/download.html
+# Agregar Nmap al PATH
 
-    Instalar Python desde python.org
-
-    Ejecutar como admin si quieres escanear localhost
-
-    Desactivar firewall para pruebas
+pip install python-nmap colorama scikit-learn pandas numpy requests shodan whois spiderfoot
+python toolnet.py
