@@ -1,19 +1,28 @@
 import random
-from colorama import Fore, Style
+from colorama import init, Fore, Style
+
+init(autoreset=True)
 
 def show_banner():
-    frases = [
-        "Escaneando tu wifi como si fuera 1999",
-        "IA: 'Esto parece inseguro... o no?'",
-        "Bienvenido a Tool-Net, deja tu cordura en la puerta",
-        "[*] Si ves muchos puertos abiertos, reza un padre nuestro"
+    frases_bizarras = [
+        "🧠 IA: 'Este puerto huele a vulnerabilidad'",
+        "🎭 Escaneando como si fuera 1999... pero con IA rancia",
+        "👾 Tool-Net: porque nmap es muy serio",
+        "🌀 Modo esquizofrenia digital activado",
+        "🔮 Predicción IA: Vas a encontrar algo que no querías ver",
+        "💀 Si esto falla, culpa al kernel"
     ]
-    print(Fore.MAGENTA + """
-  _____            _   _  __      _   
- |_   _|          | \ | | \ \    / |  
-   | | ___   ___  |  \| |  \ \  / /  
-   | |/ _ \ / _ \ | . ` |   \ \/ /   
-   | | (_) | (_) || |\  |    \  /    
-   \_/\___/ \___/ \_| \_|     \/     
-    """ + Style.RESET_ALL)
-    print(Fore.CYAN + random.choice(frases) + Style.RESET_ALL)
+    
+    ascii_banner = f"""
+{Fore.MAGENTA}╔══════════════════════════════════════════╗
+║  {Fore.CYAN} _____            _   _  __      _   {Fore.MAGENTA}   ║
+║  {Fore.CYAN}|_   _|          | \ | | \ \    / |  {Fore.MAGENTA}   ║
+║  {Fore.CYAN}  | | ___   ___  |  \| |  \ \  / /   {Fore.MAGENTA}   ║
+║  {Fore.CYAN}  | |/ _ \ / _ \ | . ` |   \ \/ /    {Fore.MAGENTA}   ║
+║  {Fore.CYAN}  | | (_) | (_) || |\  |    \  /     {Fore.MAGENTA}   ║
+║  {Fore.CYAN}  \_/\___/ \___/ \_| \_|     \/      {Fore.MAGENTA}   ║
+║                                          ║
+║  {Fore.YELLOW}{random.choice(frases_bizarras)}{Fore.MAGENTA}  ║
+╚══════════════════════════════════════════╝{Style.RESET_ALL}
+"""
+    print(ascii_banner)
