@@ -28,13 +28,21 @@ python toolnet.py
 [+] Tool-Net ready for weird scanning...
 [IA] Modo: paranoico nivel 3
 
-🐧 Termux
-bash
-
-pkg install python nmap
+🚀 Paso final: Instalar y ejecutar
+python3 -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -r requirements.txt
-python toolnet.py --termux
+python3 toolnet.py
 
-🪟 Windows
+🎯 Para Termux (extra)
+pkg install python
+pip install colorama
+python toolnet.py
 
-Usa PowerShell como administrador y ejecuta el script normalmente (requiere Nmap instalado manualmente).
+🪟 Para Windows
+
+    Instalar Python desde python.org
+
+    Ejecutar como admin si quieres escanear localhost
+
+    Desactivar firewall para pruebas
